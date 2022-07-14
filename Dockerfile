@@ -1,4 +1,4 @@
-From ubuntu:22.04
+From ubuntu:22.10
 
 ARG VERSION="1.19.2.02"
 

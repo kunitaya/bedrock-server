@@ -8,6 +8,7 @@ RUN echo "deb http://security.ubuntu.com/ubuntu impish-security main" >> /etc/ap
     && apt-get update \
     && apt-get dist-upgrade -y \
     && apt-get install -y \
+    curl \
     libssl1.1 \
     wget \
     zip \

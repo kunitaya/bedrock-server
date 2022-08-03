@@ -4,7 +4,7 @@ ARG VERSION="1.19.2.02"
 
 EXPOSE 19132/udp 19133/udp
 
-RUN echo "deb http://security.ubuntu.com/ubuntu impish-security main" >> /etc/apt/sources.list.d/impish-security.list \
+RUN echo "deb http://old-releases.ubuntu.com/ubuntu impish-security main" >> /etc/apt/sources.list.d/impish-security.list \
     && apt-get update \
     && apt-get dist-upgrade -y \
     && apt-get install -y \

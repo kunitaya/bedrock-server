@@ -9,6 +9,7 @@ RUN echo "deb http://old-releases.ubuntu.com/ubuntu impish-security main" >> /et
     && apt-get dist-upgrade -y \
     && apt-get install -y \
     curl \
+    jq \
     libssl1.1 \
     wget \
     zip \
@@ -18,6 +19,8 @@ RUN echo "deb http://old-releases.ubuntu.com/ubuntu impish-security main" >> /et
 RUN wget -q -P /tmp https://minecraft.azureedge.net/bin-linux/bedrock-server-${VERSION}.zip \
     && unzip /tmp/bedrock-server-${VERSION}.zip -d /opt/bedrock-server \
     && rm -f /tmp/bedrock-server-${VERSION}.zip
+
+COPY rp0/ /opt/bedrock-server/resource_packs/rp0/
 
 WORKDIR /opt/bedrock-server
 ENV LD_LIBRARY_PATH .
